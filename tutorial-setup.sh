@@ -4,6 +4,9 @@ set -e
 
 cp -r ~/projects/sphinx-tutorial/_build/html/ tutorial
 
+mkdir crawler
+cp -r ~/projects/sphinx-tutorial/crawler/src crawler/src
+
 mkdir docs
 cp -r ~/checkouts/sphinx/doc/_build/html/ docs/sphinx
 
