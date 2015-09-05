@@ -4,10 +4,10 @@ set -e
 
 cp -r ~/projects/sphinx-tutorial/_build/html/ tutorial
 
-mkdir crawler
+mkdir -p crawler
 cp -r ~/projects/sphinx-tutorial/crawler/src crawler/src
 
-mkdir docs
+mkdir -p docs
 cp -r ~/checkouts/sphinx/doc/_build/html/ docs/sphinx
 
 mkdir -p usb
@@ -27,7 +27,7 @@ cd ..
 
 mkdir -p packages
 
-pip install -d packages sphinx virtualenv requests beautifulsoup4 recommonmark
+pip install -d packages sphinx virtualenv requests beautifulsoup4 recommonmark sphinx-autoapi
 pip install --no-use-wheel -d packages sphinx virtualenv requests beautifulsoup4 recommonmark
 
 if [ ! -d tutorial ]
