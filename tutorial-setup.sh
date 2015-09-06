@@ -2,15 +2,14 @@
 
 set -e
 
-cp -r ~/projects/sphinx-tutorial/_build/html/ tutorial
-
 mkdir -p crawler
-cp -r ~/projects/sphinx-tutorial/crawler/src crawler/src
-
 mkdir -p docs
-cp -r ~/checkouts/sphinx/doc/_build/html/ docs/sphinx
-
 mkdir -p usb
+
+cp -r ~/projects/sphinx-tutorial/_build/html/ tutorial
+cp -r ~/projects/sphinx-tutorial/crawler/src crawler/src
+cp -r ~/checkouts/sphinx/doc/_build/html/ docs/sphinx
+cp -r ~/projects/readthedocs.org/docs/_build/html docs/read-the-docs
 
 cd usb
 
