@@ -1,0 +1,811 @@
+
+
+
+          
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Step 2: Building References &amp; API docs &mdash; Sphinx Tutorial 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Sphinx Tutorial 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Step 3: Keeping Documentation Up to Date" href="step-3.html"/>
+        <link rel="prev" title="Step 1: Getting started with RST" href="step-1.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Sphinx Tutorial
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              1.0
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+
+          
+          
+
+
+          
+
+          
+          
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="start.html">Getting Started: Overview &amp; Introduction to Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step-1.html">Step 1: Getting started with RST</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Step 2: Building References &amp; API docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#referencing">Referencing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#semantic-descriptions-and-references">Semantic Descriptions and References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#external-references">External References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatically-generating-this-markup">Automatically generating this markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#referencing-code">Referencing Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-reference-targets">Adding Reference Targets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#try-it-out">Try it out</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#importing-code">Importing Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tell-sphinx-about-your-code">Tell Sphinx about your code</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Try it out</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tie-it-all-together">Tie it all together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extra-credit">Extra Credit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#look-through-intersphinx">Look through intersphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understand-the-code">Understand the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moving-on">Moving on</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="step-3.html">Step 3: Keeping Documentation Up to Date</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finish.html">Finishing Up: Additional Extensions &amp; Individual Exploration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Supplemental Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful-links.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step1/index.html">Crawler Step 1 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step2/index.html">Crawler Step 2 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step3/index.html">Crawler Step 3 Documentation</a></li>
+</ul>
+
+          
+
+          
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Sphinx Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Step 2: Building References &amp; API docs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="step-2-building-references-api-docs">
+<h1>Step 2: Building References &amp; API docs<a class="headerlink" href="#step-2-building-references-api-docs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="referencing">
+<h3>Referencing<a class="headerlink" href="#referencing" title="Permalink to this headline">¶</a></h3>
+<p>Another important Sphinx feature is that it allows referencing across documents.
+This is another powerful way to tie documents together.</p>
+<p>The simplest way to do this is to define an explicit reference object:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="nt">_reference-name:</span>
+
+<span class="gh">Cool section</span>
+<span class="gh">------------</span>
+</pre></div>
+</div>
+<p>Which can then be referenced with <code class="docutils literal"><span class="pre">:ref:</span></code>:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="na">:ref:</span><span class="nv">`reference-name`</span>
+</pre></div>
+</div>
+<p>Which will then be rendered with the title of the section <em>Cool section</em>.</p>
+<p>Sphinx also supports <code class="docutils literal"><span class="pre">:doc:`docname`</span></code> for linking to a document.</p>
+</div>
+<div class="section" id="semantic-descriptions-and-references">
+<h3>Semantic Descriptions and References<a class="headerlink" href="#semantic-descriptions-and-references" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx also has much more powerful semantic referencing capabilties,
+which knows all about software development concepts.</p>
+<p>Say you&#8217;re creating a CLI application.
+You can define an option for that program quite easily:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">option</span><span class="p">::</span> -i &lt;regex&gt;, --ignore &lt;regex&gt;
+
+   Ignore pages that match a specific pattern.
+</pre></div>
+</div>
+<p>That can also be referenced quite simply:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="na">:option:</span><span class="nv">`-i`</span>
+</pre></div>
+</div>
+<p>Sphinx includes a large number of these semantic types:</p>
+<ul class="simple">
+<li>Module</li>
+<li>Class</li>
+<li>Method</li>
+</ul>
+</div>
+<div class="section" id="external-references">
+<h3>External References<a class="headerlink" href="#external-references" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx also includes a number of pre-defined references for external concepts.
+Things like PEP&#8217;s and RFC&#8217;s:</p>
+<div class="highlight-rst"><div class="highlight"><pre>You can learn more about this at <span class="na">:pep:</span><span class="nv">`8`</span> or <span class="na">:rfc:</span><span class="nv">`1984`</span>.
+</pre></div>
+</div>
+<p>You can read more about this in the Sphinx <a class="reference external" href="http://sphinx-doc.org/markup/inline.html#inline-markup" title="(in Sphinx v1.3.1+)"><span>Inline markup</span></a> docs.</p>
+</div>
+<div class="section" id="automatically-generating-this-markup">
+<h3>Automatically generating this markup<a class="headerlink" href="#automatically-generating-this-markup" title="Permalink to this headline">¶</a></h3>
+<p>Of course, Sphinx wants to make your life easy.
+It includes ways to automatically create these object definitions for your own code.
+This is called <code class="docutils literal"><span class="pre">audodoc</span></code>,
+which allows you do to syntax like this:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> crawler
+</pre></div>
+</div>
+<p>and have it document the full Python module importable as <code class="docutils literal"><span class="pre">crawler</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The module must be importable by Sphinx when running.
+We&#8217;ll cover how to do this in the Tasks below.</p>
+</div>
+<p>You can read more about this in the Sphinx <a class="reference external" href="http://sphinx-doc.org/ext/autodoc.html#module-sphinx.ext.autodoc" title="(in Sphinx v1.3.1+)"><code class="xref py py-mod docutils literal"><span class="pre">autodoc</span></code></a> docs.</p>
+</div>
+</div>
+<div class="section" id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="referencing-code">
+<h3>Referencing Code<a class="headerlink" href="#referencing-code" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s go ahead and add a cookbook to our documentation.
+Users will often come to your project to solve the same problems.
+Including a Cookbook or Examples section will be a great resource for this content.</p>
+<p>In your <code class="docutils literal"><span class="pre">cookbook.rst</span></code>,
+add the following:</p>
+<div class="highlight-rst"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="highlight"><pre>Cookbook
+
+Crawl a web page
+
+The most simple way to use our program is with no arguments.
+Simply run:
+
+python main.py -u &lt;url&gt;
+
+to crawl a webpage.
+
+Crawl a page slowly
+
+To add a delay to your crawler,
+use -d:
+
+python main.py -d 10 -u &lt;url&gt;
+
+This will wait 10 seconds between page fetches.
+
+Crawl only your blog
+
+You will want to use the -i flag,
+which while ignore URLs matching the passed regex::
+
+python main.py -i &quot;^blog&quot; -u &lt;url&gt;
+
+This will only crawl pages that contain your blog URL.
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Live Preview: <a class="reference internal" href="crawler/docs/step2/cookbook.html"><em>Cookbook</em></a></p>
+</div>
+<p>Remember, you will need to use <code class="docutils literal"><span class="pre">:option:</span></code> blocks here.
+This is because they are referencing a command line option for our program.</p>
+</div>
+<div class="section" id="adding-reference-targets">
+<h3>Adding Reference Targets<a class="headerlink" href="#adding-reference-targets" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have pointed at our CLI options,
+we need to actually define them.
+In your <code class="docutils literal"><span class="pre">cli.rst</span></code> file,
+add the following:</p>
+<div class="highlight-rst"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre>Command Line Options
+
+These flags allow you to change the behavior of Crawler.
+Check out how to use them in the Cookbook.
+
+-d &lt;sec&gt;, --delay &lt;sec&gt;
+
+Use a delay in between page fetchs so we don&#39;t overwhelm the remote server.
+Value in seconds.
+
+Default: 1 second
+    
+-i &lt;regex&gt;, --ignore &lt;regex&gt;
+
+Ignore pages that match a specific pattern.
+
+Default: None
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Live Preview: <a class="reference internal" href="crawler/docs/step2/cli.html"><em>Command Line Options</em></a></p>
+</div>
+<p>Here you are documenting the actual options your code takes.</p>
+<div class="section" id="try-it-out">
+<h4>Try it out<a class="headerlink" href="#try-it-out" title="Permalink to this headline">¶</a></h4>
+<p>Let&#8217;s go ahead and build the docs and see what happens.
+Do a:</p>
+<div class="highlight-python"><div class="highlight"><pre>make html
+</pre></div>
+</div>
+<p>Here you will see that the <code class="docutils literal"><span class="pre">:option:</span></code> blocks magically become links to the definition.
+This is your first taste of <a class="reference internal" href="glossary.html#term-semantic-markup"><span class="xref std std-term">Semantic Markup</span></a>.
+With Sphinx,
+we are able to simply say that something is a <code class="docutils literal"><span class="pre">option</span></code>,
+and then it handles everything for us;
+linking between the definition and the usage.</p>
+</div>
+</div>
+<div class="section" id="importing-code">
+<h3>Importing Code<a class="headerlink" href="#importing-code" title="Permalink to this headline">¶</a></h3>
+<p>Being able to define options and link to them is pretty neat.
+Wouldn&#8217;t it be great if we could do that with actual code too?
+Sphinx makes this easy,
+let&#8217;s take a look.</p>
+<p>We&#8217;ll go ahead an create an <code class="docutils literal"><span class="pre">api.rst</span></code> that will hold our API reference:</p>
+<div class="highlight-rst"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre>Crawler Python API
+
+Getting started with Crawler is easy.
+The main class you need to care about is crawler.main.Crawler
+
+crawler.main
+
+automodule: crawler.main
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Live Preview: <a class="reference internal" href="crawler/docs/step2/api.html"><em>Crawler Python API</em></a></p>
+</div>
+<p>Remember, you&#8217;ll need to use the  <code class="docutils literal"><span class="pre">..</span> <span class="pre">autoclass::</span></code> directive to pull in your source code.
+This will render the docstrings of your Python code nicely.</p>
+</div>
+<div class="section" id="tell-sphinx-about-your-code">
+<h3>Tell Sphinx about your code<a class="headerlink" href="#tell-sphinx-about-your-code" title="Permalink to this headline">¶</a></h3>
+<p>When Sphinx runs autodoc,
+it imports your Python code to pull off the docstrings.
+This means that Sphinx has to be able to see your code.
+We&#8217;ll need to add our <code class="docutils literal"><span class="pre">PYTHONPATH</span></code> to our <code class="docutils literal"><span class="pre">conf.py</span></code> so it can import the code.</p>
+<p>If you open up your <code class="docutils literal"><span class="pre">conf.py</span></code> file,
+you should see something close to this on line 18:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c"># add these directories to sys.path here. If the directory is relative to the</span>
+<span class="c"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+<span class="c">#sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+</pre></div>
+</div>
+<p>As it notes,
+you need to let it know the path to your Python source.
+In our example it will be <code class="docutils literal"><span class="pre">../src/</span></code>,
+so go ahead and put that in this setting.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You should always use relative paths here.
+Part of the value of Sphinx is having your docs build on other people&#8217;s computers,
+and if you hard code local paths that won&#8217;t work!</p>
+</div>
+<div class="section" id="id1">
+<h4>Try it out<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Now go ahead and rengerate your docs and look at the magic that happened:</p>
+<div class="highlight-python"><div class="highlight"><pre>make html
+</pre></div>
+</div>
+<p>Your Python docstrings have been magically imported into the project.</p>
+</div>
+</div>
+<div class="section" id="tie-it-all-together">
+<h3>Tie it all together<a class="headerlink" href="#tie-it-all-together" title="Permalink to this headline">¶</a></h3>
+<p>Now let&#8217;s link directly to that for users who come in to the project.
+Update your <code class="docutils literal"><span class="pre">index.rst</span></code> to look like:</p>
+<div class="highlight-rst"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre>Crawler Step 2 Documentation
+
+User Guide
+
+toctree:
+
+install
+support
+cookbook
+
+Programmer Reference
+
+toctree:
+
+cli
+api
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Live Preview: <a class="reference internal" href="crawler/docs/step2/index.html"><em>Crawler Step 2 Documentation</em></a></p>
+</div>
+<p>One last time,
+let&#8217;s rebuild those docs:</p>
+<div class="highlight-python"><div class="highlight"><pre>make html
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You now have awesome documentation! :)</p>
+</div>
+<p>Now you have a beautiful documentation reference that is coming directly from your code.
+This means that every time you change your code,
+it will automatically be reflected in your documentation.</p>
+<p>The beauty of this approach is that it allows you to keep your prose and reference documentation in the same place.
+It even lets you semantically reference the code from inside the docs.
+This is amazingly powerful and a great way to write documentation.</p>
+</div>
+</div>
+<div class="section" id="extra-credit">
+<h2>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this headline">¶</a></h2>
+<p>Have some extra time left?
+Let&#8217;s look through the code to understand what&#8217;s happening here more.</p>
+<div class="section" id="look-through-intersphinx">
+<h3>Look through intersphinx<a class="headerlink" href="#look-through-intersphinx" title="Permalink to this headline">¶</a></h3>
+<p>Intersphinx allows you to bring the power of Sphinx references to multiple projects.
+It lets you pull in references,
+and semantically link them across projects.
+For example,
+in this guide we reference the Sphinx docs a lot,
+so we have this intersphinx setting:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">intersphinx_mapping</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;sphinx&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s">&#39;http://sphinx-doc.org/&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Which allows us to add a prefix to references and have them resolve:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="na">:ref:</span><span class="nv">`sphinx:inline-markup`</span>
+</pre></div>
+</div>
+<p>We can also ignore the prefix,
+and Sphinx will fall back to intersphinx references if none exist in the current project:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="na">:ref:</span><span class="nv">`inline-markup`</span>
+</pre></div>
+</div>
+<p>You can read more about this in the <a class="reference external" href="http://sphinx-doc.org/ext/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v1.3.1+)"><code class="xref py py-mod docutils literal"><span class="pre">intersphinx</span></code></a> docs.</p>
+</div>
+<div class="section" id="understand-the-code">
+<h3>Understand the code<a class="headerlink" href="#understand-the-code" title="Permalink to this headline">¶</a></h3>
+<p>A lot of the magic that is happening in <a class="reference internal" href="#importing-code">Importing Code</a> above is actually in the source code.</p>
+<p>Check out the code for <code class="docutils literal"><span class="pre">crawler/main.py</span></code>:</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> <span class="n">OptionParser</span>
+<span class="c"># Python 3 compat</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="kn">import</span> <span class="n">urlparse</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">should_ignore</span>
+
+
+<span class="k">class</span> <span class="nc">Crawler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main Crawler object.</span>
+
+<span class="sd">    Example::</span>
+
+<span class="sd">        c = Crawler(&#39;http://example.com&#39;)</span>
+<span class="sd">        c.crawl()</span>
+
+<span class="sd">    :param delay: Number of seconds to wait between searches</span>
+<span class="sd">    :param ignore: Paths to ignore</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">ignore</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delay</span> <span class="o">=</span> <span class="n">delay</span>
+        <span class="k">if</span> <span class="n">ignore</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span> <span class="o">=</span> <span class="n">ignore</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a specific URL, log its response, and return its content.</span>
+
+<span class="sd">        :param url: The fully qualified URL to retrieve</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">log</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+
+    <span class="k">def</span> <span class="nf">crawl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Crawl the URL set up in the crawler.</span>
+
+<span class="sd">        This is the main entry point, and will block while it runs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s">&quot;html.parser&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="n">tag</span><span class="p">[</span><span class="s">&#39;href&#39;</span><span class="p">]</span>
+            <span class="n">parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">parsed</span><span class="o">.</span><span class="n">scheme</span><span class="p">:</span>
+                <span class="n">to_get</span> <span class="o">=</span> <span class="n">link</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">to_get</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="n">link</span>
+            <span class="k">if</span> <span class="n">should_ignore</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">,</span> <span class="n">to_get</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">&#39;Ignoring URL: {url}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">to_get</span><span class="p">))</span>
+                <span class="k">continue</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">to_get</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">run_main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A small wrapper that is used for running as a CLI Script.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">()</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">&quot;-u&quot;</span><span class="p">,</span> <span class="s">&quot;--url&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;url&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s">&quot;http://docs.readthedocs.org/en/latest/&quot;</span><span class="p">,</span>
+                      <span class="n">help</span><span class="o">=</span><span class="s">&quot;URL to fetch&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">&quot;-d&quot;</span><span class="p">,</span> <span class="s">&quot;--delay&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;delay&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s">&quot;int&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                      <span class="n">help</span><span class="o">=</span><span class="s">&quot;Delay between fetching&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">&quot;-i&quot;</span><span class="p">,</span> <span class="s">&quot;--ignore&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                      <span class="n">help</span><span class="o">=</span><span class="s">&quot;Ignore a subset of URL&#39;s&quot;</span><span class="p">)</span>
+
+    <span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">c</span> <span class="o">=</span> <span class="n">Crawler</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">delay</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">ignore</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">crawl</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run_main</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p>As you can see,
+we&#8217;re heavily using RST in our docstrings.
+This gives us the same power as we have in Sphinx,
+but allows it to live within the code base.</p>
+<p>This approach of having the docs live inside the code is great for some things.
+However,
+the power of Sphinx allows you to mix docstrings and prose documentation together.
+This lets you keep the amount of</p>
+</div>
+<div class="section" id="moving-on">
+<h3>Moving on<a class="headerlink" href="#moving-on" title="Permalink to this headline">¶</a></h3>
+<p>Could it get better?
+In fact,
+it can and it will.
+Let&#8217;s go on to <a class="reference internal" href="step-3.html"><em>Step 3: Keeping Documentation Up to Date</em></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="step-3.html" class="btn btn-neutral float-right" title="Step 3: Keeping Documentation Up to Date" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="step-1.html" class="btn btn-neutral" title="Step 1: Getting started with RST" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Eric Holscher.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

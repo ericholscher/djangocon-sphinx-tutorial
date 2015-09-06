@@ -1,0 +1,530 @@
+
+
+
+          
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Step 1: Getting started with RST &mdash; Sphinx Tutorial 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Sphinx Tutorial 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Step 2: Building References &amp; API docs" href="step-2.html"/>
+        <link rel="prev" title="Getting Started: Overview &amp; Introduction to Concepts" href="start.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Sphinx Tutorial
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              1.0
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+
+          
+          
+
+
+          
+
+          
+          
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="start.html">Getting Started: Overview &amp; Introduction to Concepts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Step 1: Getting started with RST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sections">Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-samples">Code Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hyperlink-syntax">Hyperlink Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-example-syntax">Code Example Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#table-of-contents-tree">Table of Contents Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-installation-page">Create Installation page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-support-page">Create Support page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-toctree">Add TocTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sanity-check">Sanity Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-docs">Build Docs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extra-credit">Extra Credit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#make-a-manpage">Make a manpage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-single-page-document">Create a single page document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#play-with-rst">Play with RST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moving-on">Moving on</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="step-2.html">Step 2: Building References &amp; API docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step-3.html">Step 3: Keeping Documentation Up to Date</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finish.html">Finishing Up: Additional Extensions &amp; Individual Exploration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Supplemental Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful-links.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step1/index.html">Crawler Step 1 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step2/index.html">Crawler Step 2 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step3/index.html">Crawler Step 3 Documentation</a></li>
+</ul>
+
+          
+
+          
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Sphinx Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Step 1: Getting started with RST</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="step-1-getting-started-with-rst">
+<h1>Step 1: Getting started with RST<a class="headerlink" href="#step-1-getting-started-with-rst" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have our basic skeleton,
+let&#8217;s document the project.
+As you might have guessed from the name,
+we&#8217;ll be documenting a basic web crawler.</p>
+<p>For this project,
+we&#8217;ll have the following pages:</p>
+<ul class="simple">
+<li>Index Page</li>
+<li>Support</li>
+<li>Installation</li>
+<li>Cookbook</li>
+<li>Command Line Options</li>
+<li>API</li>
+</ul>
+<p>Let&#8217;s go over the concepts we&#8217;ll cover,
+and then we can talk more about the pages to create.</p>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<p>A lot of these RST syntax examples are covered in the Sphinx <a class="reference external" href="http://sphinx-doc.org/rest.html#rst-primer" title="(in Sphinx v1.3.1+)"><span>reStructuredText Primer</span></a>.</p>
+<div class="section" id="sections">
+<span id="index-0"></span><h3>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span class="gh">Title</span>
+<span class="gh">=====</span>
+
+<span class="gh">Section</span>
+<span class="gh">-------</span>
+
+<span class="gh">Subsection</span>
+<span class="gh">~~~~~~~~~~</span>
+</pre></div>
+</div>
+<p>Every Sphinx document has multiple level of headings.
+Section headers are created by underlining
+the section title with a punctuation character, at least
+as long as the text.</p>
+<p>They give structure to the document,
+which is used in navigation and in the display in all output formats.</p>
+</div>
+<div class="section" id="code-samples">
+<h3>Code Samples<a class="headerlink" href="#code-samples" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre>You can use <span class="s">``backticks``</span> for showing <span class="s">``highlighted``</span> code.
+</pre></div>
+</div>
+<p>If you want to make sure that text is shown in monospaced fonts for code examples or concepts,
+use double backticks arond it.
+It looks <code class="docutils literal"><span class="pre">like</span> <span class="pre">this</span></code> on output.</p>
+</div>
+<div class="section" id="hyperlink-syntax">
+<h3>Hyperlink Syntax<a class="headerlink" href="#hyperlink-syntax" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span class="s">`A cool website`_</span>
+
+<span class="p">..</span> <span class="nt">_A cool website:</span> http://sphinx-doc.org
+</pre></div>
+</div>
+<p>The link text is set by putting a <code class="docutils literal"><span class="pre">_</span></code> after some text.
+The <code class="docutils literal"><span class="pre">`</span></code> is used to group text,
+allowing you to include multiple words in your link text.
+You should use the <code class="docutils literal"><span class="pre">`</span></code>,
+even when the link text is only one word.
+This keeps the syntax consistent.</p>
+<p>The link target is defined at the bottom of the section with <code class="docutils literal"><span class="pre">..</span> <span class="pre">_&lt;link</span> <span class="pre">text&gt;:</span> <span class="pre">&lt;target&gt;</span></code>.</p>
+</div>
+<div class="section" id="code-example-syntax">
+<span id="index-1"></span><h3>Code Example Syntax<a class="headerlink" href="#code-example-syntax" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre>A cool bit of code<span class="se">::</span>
+
+<span class="s">   Some cool Code</span>
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> rst
+
+   A bit of <span class="gs">**rst**</span> which should be <span class="ge">*highlighted*</span> properly.
+</pre></div>
+</div>
+<p>The syntax for displaying code is <code class="docutils literal"><span class="pre">::</span></code>.
+When it is used at the end of a sentence,
+Sphinx is smart and displays one <code class="docutils literal"><span class="pre">:</span></code> in the output,
+and knows there is a code example in the following indented block.</p>
+<p>Sphinx,
+like Python,
+uses meaningful whitespace.
+Blocks of content are structured based on the indention level they are on.
+You can see this concept with our <code class="docutils literal"><span class="pre">code-block</span></code> directive later.</p>
+</div>
+<div class="section" id="table-of-contents-tree">
+<span id="toctree-syntax"></span><span id="index-2"></span><h3>Table of Contents Tree<a class="headerlink" href="#table-of-contents-tree" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+
+   install
+   support
+</pre></div>
+</div>
+<p>Now would be a good time to introduce the <code class="docutils literal"><span class="pre">toctree</span></code>.
+One of the main concepts in Sphinx is that it allows multiple pages to be combined into a cohesive hierarchy.
+The <code class="docutils literal"><span class="pre">toctree</span></code> directive is a fundamental part of this structure.</p>
+<p>The above example will output a Table of Contents in the page where it occurs.
+The <code class="docutils literal"><span class="pre">maxdepth</span></code> argument tells Sphinx to include 2 levels of headers in it&#8217;s output.
+It will output the 2 top-level headers of the pages listed.
+This also tells Sphinx that the other pages are sub-pages of the current page,
+creating a &#8220;tree&#8221; structure of the pages:</p>
+<div class="highlight-python"><div class="highlight"><pre>index
+├── install
+├── support
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The TOC Tree is also used for generating the navigation elements inside Sphinx.
+It is quite important,
+and one of the most powerful concepts in Sphinx.</p>
+</div>
+</div>
+</div>
+<div class="section" id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-installation-page">
+<h3>Create Installation page<a class="headerlink" href="#create-installation-page" title="Permalink to this headline">¶</a></h3>
+<p>Installation documentation is really important.
+Anyone who is coming to the project will need to install it.
+For our example,
+we are installing a basic Python script,
+so it will be pretty easy.</p>
+<p>Include the following in your <code class="docutils literal"><span class="pre">install.rst</span></code>, properly marked up:</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre>Installation
+
+At the command line:
+
+easy_install crawler
+
+Or, if you have pip installed:
+
+pip install crawler
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Live Preview: <a class="reference internal" href="crawler/docs/step1/install.html"><em>Installation</em></a></p>
+</div>
+</div>
+<div class="section" id="create-support-page">
+<h3>Create Support page<a class="headerlink" href="#create-support-page" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s always important that users can ask questions when they get stuck.
+There are many ways to handle this,
+but normal approaches are to have an IRC channel and mailing list.</p>
+<p>Go ahead and put this in your <code class="docutils literal"><span class="pre">support.rst</span></code>, but add the proper RST markup:</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre>Support
+
+The easiest way to get help with the project is to join the #crawler
+channel on Freenode.
+We hang out there and you can get real-time help with your projects.
+The other good way is to open an issue on Github.
+
+The mailing list at https://groups.google.com/forum/#!forum/crawler 
+is also available for support.
+
+Freenode: irc://freenode.net
+Github: http://github.com/example/crawler/issues
+
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Live Preview: <a class="reference internal" href="crawler/docs/step1/support.html"><em>Support</em></a></p>
+</div>
+</div>
+<div class="section" id="add-toctree">
+<h3>Add TocTree<a class="headerlink" href="#add-toctree" title="Permalink to this headline">¶</a></h3>
+<p>Now you need to tie all these files together.
+As we mentioned above,
+the <a class="reference internal" href="#toctree-syntax"><span>Table of Contents Tree</span></a> is the best way to do this.
+Go ahead and complete the <code class="docutils literal"><span class="pre">toctree</span></code> directive in your <code class="docutils literal"><span class="pre">index.rst</span></code> file,
+adding the new <code class="docutils literal"><span class="pre">install</span></code> and <code class="docutils literal"><span class="pre">support</span></code>.</p>
+</div>
+<div class="section" id="sanity-check">
+<h3>Sanity Check<a class="headerlink" href="#sanity-check" title="Permalink to this headline">¶</a></h3>
+<p>Your filesystem should now look something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>crawler
+├── src
+└── docs
+    ├── index.rst
+    ├── support.rst
+    ├── install.rst
+    ├── Makefile
+    ├── conf.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-docs">
+<h3>Build Docs<a class="headerlink" href="#build-docs" title="Permalink to this headline">¶</a></h3>
+<p>Now that you have a few pages of content,
+go ahead and build your docs again:</p>
+<div class="highlight-python"><div class="highlight"><pre>make html
+</pre></div>
+</div>
+<p>If you open up your <code class="docutils literal"><span class="pre">index.html</span></code>,
+you should see the basic structure of your docs from the included <code class="docutils literal"><span class="pre">toctree</span></code> directive.</p>
+</div>
+</div>
+<div class="section" id="extra-credit">
+<h2>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this headline">¶</a></h2>
+<p>Have some extra time left?
+Check out these other cool things you can do with Sphinx.</p>
+<div class="section" id="make-a-manpage">
+<h3>Make a manpage<a class="headerlink" href="#make-a-manpage" title="Permalink to this headline">¶</a></h3>
+<p>The beauty of Sphinx is that it can output in multiple formats,
+not just HTML.
+All of those formats share the same base format though,
+so you only have to change things in one place.
+So you can generate a manpage for your docs:</p>
+<div class="highlight-python"><div class="highlight"><pre>make man
+</pre></div>
+</div>
+<p>This will place a manpage in <code class="docutils literal"><span class="pre">_build/man</span></code>.
+You can then view it with:</p>
+<div class="highlight-python"><div class="highlight"><pre>man _build/man/crawler.1
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-single-page-document">
+<h3>Create a single page document<a class="headerlink" href="#create-a-single-page-document" title="Permalink to this headline">¶</a></h3>
+<p>Some people prefer one large HTML document,
+instead of having to look through multiple pages.
+This is another area where Sphinx shines.
+You can write your documentation in multiple files to make editing and updating easier.
+Then if you want to distribute a single page HTML version:</p>
+<div class="highlight-python"><div class="highlight"><pre>make singlehtml
+</pre></div>
+</div>
+<p>This will combine all of your HTML pages into a single page.
+Check it out by opening it in your browser:</p>
+<div class="highlight-python"><div class="highlight"><pre>open _build/singlehtml/index.html
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You&#8217;ll notice that it included the documents in the order
+that your <a class="reference internal" href="#toctree-syntax"><span>TOC Tree</span></a> was defined.</p>
+</div>
+</div>
+<div class="section" id="play-with-rst">
+<h3>Play with RST<a class="headerlink" href="#play-with-rst" title="Permalink to this headline">¶</a></h3>
+<p>RST takes a bit of practice to wrap your head around.
+Go over to <a class="reference external" href="http://rst.ninjs.org">http://rst.ninjs.org</a>,
+which is a live preview.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use the <a class="reference internal" href="cheatsheet.html"><em>Cheat Sheet</em></a> for lots more ideas!</p>
+</div>
+<p>Looking for some ideas of what the syntax contains?
+The <a class="reference external" href="http://sphinx-doc.org/rest.html#rst-primer" title="(in Sphinx v1.3.1+)"><span>reStructuredText Primer</span></a> in the Sphinx docs is a great place to start.</p>
+</div>
+<div class="section" id="moving-on">
+<h3>Moving on<a class="headerlink" href="#moving-on" title="Permalink to this headline">¶</a></h3>
+<p>Now it is time to move on to <a class="reference internal" href="step-2.html"><em>Step 2: Building References &amp; API docs</em></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="step-2.html" class="btn btn-neutral float-right" title="Step 2: Building References &amp; API docs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="start.html" class="btn btn-neutral" title="Getting Started: Overview &amp; Introduction to Concepts" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Eric Holscher.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,512 @@
+
+
+
+          
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started: Overview &amp; Introduction to Concepts &mdash; Sphinx Tutorial 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Sphinx Tutorial 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Step 1: Getting started with RST" href="step-1.html"/>
+        <link rel="prev" title="Sphinx Tutorial" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Sphinx Tutorial
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              1.0
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+
+          
+          
+
+
+          
+
+          
+          
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started: Overview &amp; Introduction to Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphinx-philosophy">Sphinx Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-sphinx">Installing Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-this-repo">Get this repo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-docs">Building docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-theme">Custom Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extra-credit">Extra Credit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-conf-py">Understanding <code class="docutils literal"><span class="pre">conf.py</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moving-on">Moving on</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="step-1.html">Step 1: Getting started with RST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step-2.html">Step 2: Building References &amp; API docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step-3.html">Step 3: Keeping Documentation Up to Date</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finish.html">Finishing Up: Additional Extensions &amp; Individual Exploration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Supplemental Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful-links.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step1/index.html">Crawler Step 1 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step2/index.html">Crawler Step 2 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step3/index.html">Crawler Step 3 Documentation</a></li>
+</ul>
+
+          
+
+          
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Sphinx Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Getting Started: Overview &amp; Introduction to Concepts</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started-overview-introduction-to-concepts">
+<h1>Getting Started: Overview &amp; Introduction to Concepts<a class="headerlink" href="#getting-started-overview-introduction-to-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sphinx-philosophy">
+<h3>Sphinx Philosophy<a class="headerlink" href="#sphinx-philosophy" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> is what is called a documentation generator.
+This means that it takes a bunch of source files in plain text,
+and generates a bunch of other awesome things, mainly HTML.
+For our use case you can think of it as a program that takes in plain text
+files in <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a> format, and outputs HTML.</p>
+<div class="highlight-python"><div class="highlight"><pre>reST -&gt; Sphinx -&gt; HTML
+</pre></div>
+</div>
+<p>So as a user of Sphinx, your main job will be writing these text files.
+This means that you should be minimally familiar with <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a> as
+a language.
+It&#8217;s similar to Markdown in a lot of ways,
+if you are already familiar with Markdown.</p>
+</div>
+</div>
+<div class="section" id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-sphinx">
+<h3>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="Permalink to this headline">¶</a></h3>
+<p>The first step is installing <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>.
+Sphinx is a python project,
+so it can be installed like any other python library.
+Every Operating System should have Python pre-installed,
+so you should just have to run:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install sphinx
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Advanced users can install this in a virtualenv if they wish.
+Also, <code class="docutils literal"><span class="pre">easy_install</span> <span class="pre">install</span> <span class="pre">Sphinx</span></code> works fine if you don&#8217;t have pip.</p>
+</div>
+</div>
+<div class="section" id="get-this-repo">
+<h3>Get this repo<a class="headerlink" href="#get-this-repo" title="Permalink to this headline">¶</a></h3>
+<p>To do this tutorial,
+you need the actual repository.
+It contains the example code that we will be documenting.</p>
+<p>You can clone it here:</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone https://github.com/ericholscher/djangocon-sphinx-tutorial
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h3>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<p>Now you are ready to creating documentation.
+You should have a directory called <code class="docutils literal"><span class="pre">crawler</span></code>,
+which contains source code in it&#8217;s <code class="docutils literal"><span class="pre">src</span></code> directory.
+Inside the <code class="docutils literal"><span class="pre">crawler</span></code> you should create a <code class="docutils literal"><span class="pre">docs</span></code> directory,
+and move into it:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd crawler
+mkdir docs
+cd docs
+</pre></div>
+</div>
+<p>Then you can create the Sphinx project skeleton in this directory:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+<p>Have the <em>Project name</em> be <code class="docutils literal"><span class="pre">Crawler</span></code>,
+put in your own <em>Author name</em>,
+and put in <code class="docutils literal"><span class="pre">1.0</span></code> as the <em>Project version</em>.
+Otherwise you can accept the default options.</p>
+<p>My output looks like this:</p>
+<div class="highlight-text"><div class="highlight"><pre>-&gt; sphinx-quickstart
+Welcome to the Sphinx 1.3.1 quickstart utility.
+
+Please enter values for the following settings (just press Enter to
+accept a default value, if one is given in brackets).
+
+Enter the root path for documentation.
+&gt; Root path for the documentation [.]:
+
+You have two options for placing the build directory for Sphinx output.
+Either, you use a directory &quot;_build&quot; within the root path, or you separate
+&quot;source&quot; and &quot;build&quot; directories within the root path.
+&gt; Separate source and build directories (y/n) [n]: 
+
+Inside the root directory, two more directories will be created; &quot;_templates&quot;
+for custom HTML templates and &quot;_static&quot; for custom stylesheets and other static
+files. You can enter another prefix (such as &quot;.&quot;) to replace the underscore.
+&gt; Name prefix for templates and static dir [_]:
+
+The project name will occur in several places in the built documentation.
+&gt; Project name: Crawler
+&gt; Author name(s): Eric Holscher
+
+Sphinx has the notion of a &quot;version&quot; and a &quot;release&quot; for the
+software. Each version can have multiple releases. For example, for
+Python the version is something like 2.5 or 3.0, while the release is
+something like 2.5.1 or 3.0a1.  If you don&#39;t need this dual structure,
+just set both to the same value.
+&gt; Project version: 1.0
+&gt; Project release [1.0]:
+
+If the documents are to be written in a language other than English,
+you can select a language here by its language code. Sphinx will then
+translate text that it generates into that language.
+
+For a list of supported codes, see
+http://sphinx-doc.org/config.html#confval-language.
+&gt; Project language [en]:
+
+The file name suffix for source files. Commonly, this is either &quot;.txt&quot;
+or &quot;.rst&quot;.  Only files with this suffix are considered documents.
+&gt; Source file suffix [.rst]:
+
+One document is special in that it is considered the top node of the
+&quot;contents tree&quot;, that is, it is the root of the hierarchical structure
+of the documents. Normally, this is &quot;index&quot;, but if your &quot;index&quot;
+document is a custom template, you can also set this to another filename.
+&gt; Name of your master document (without suffix) [index]:
+
+Sphinx can also add configuration for epub output:
+&gt; Do you want to use the epub builder (y/n) [n]:
+
+Please indicate if you want to use one of the following Sphinx extensions:
+&gt; autodoc: automatically insert docstrings from modules (y/n) [n]:
+&gt; doctest: automatically test code snippets in doctest blocks (y/n) [n]:
+&gt; intersphinx: link between Sphinx documentation of different projects (y/n) [n]:
+&gt; todo: write &quot;todo&quot; entries that can be shown or hidden on build (y/n) [n]:
+&gt; coverage: checks for documentation coverage (y/n) [n]:
+&gt; pngmath: include math, rendered as PNG images (y/n) [n]:
+&gt; mathjax: include math, rendered in the browser by MathJax (y/n) [n]:
+&gt; ifconfig: conditional inclusion of content based on config values (y/n) [n]:
+&gt; viewcode: include links to the source code of documented Python objects (y/n) [n]:
+
+A Makefile and a Windows command file can be generated for you so that you
+only have to run e.g. `make html&#39; instead of invoking sphinx-build
+directly.
+&gt; Create Makefile? (y/n) [y]: 
+&gt; Create Windows command file? (y/n) [y]: 
+
+Creating file ./conf.py.
+Creating file ./index.rst.
+Creating file ./Makefile.
+Creating file ./make.bat.
+
+Finished: An initial directory structure has been created.
+
+You should now populate your master file ./index.rst and create other documentation
+source files. Use the Makefile to build the docs, like so:
+   make builder
+where &quot;builder&quot; is one of the supported builders, e.g. html, latex or linkcheck.
+</pre></div>
+</div>
+<p>Your file system should now look similar to this:</p>
+<div class="highlight-python"><div class="highlight"><pre>crawler
+├── src
+└── docs
+    ├── index.rst
+    ├── conf.py
+    ├── Makefile
+    ├── make.bat
+    ├── _build
+    ├── _static
+    ├── _templates
+</pre></div>
+</div>
+<p>We have a top-level <code class="docutils literal"><span class="pre">docs</span></code> directory in the main project directory.
+Inside of this is:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">index.rst</span></code>:</dt>
+<dd>This is the index file for the documentation, or what lives at <code class="docutils literal"><span class="pre">/</span></code>.
+It normally contains a <em>Table of Contents</em> that will link to all other
+pages of the documentation.</dd>
+<dt><code class="docutils literal"><span class="pre">conf.py</span></code>:</dt>
+<dd>Allows for customization of Sphinx.
+You won&#8217;t need to use this too much yet,
+but it&#8217;s good to be familiar with this file.</dd>
+<dt><code class="docutils literal"><span class="pre">Makefile</span></code> &amp; <code class="docutils literal"><span class="pre">make.bat</span></code>:</dt>
+<dd>This is the main interface for local development,
+and shouldn&#8217;t be changed.</dd>
+<dt><code class="docutils literal"><span class="pre">_build</span></code>:</dt>
+<dd>The directory that your output files go into.</dd>
+<dt><code class="docutils literal"><span class="pre">_static</span></code>:</dt>
+<dd>The directory to include all your static files, like images.</dd>
+<dt><code class="docutils literal"><span class="pre">_templates</span></code>:</dt>
+<dd>Allows you to override Sphinx templates to customze look and feel.</dd>
+</dl>
+</div>
+<div class="section" id="building-docs">
+<h3>Building docs<a class="headerlink" href="#building-docs" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s build our docs into HTML to see how it works.
+Simply run:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Inside top-level docs/ directory.</span>
+<span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>This should run Sphinx in your shell, and output HTML.
+At the end, it should say something about the documents being ready in
+<code class="docutils literal"><span class="pre">_build/html</span></code>.
+You can now open them in your browser by typing:</p>
+<div class="highlight-python"><div class="highlight"><pre>open _build/html/index.html
+</pre></div>
+</div>
+<p>You can also view it by running a web server in that directory:</p>
+<div class="highlight-python"><div class="highlight"><pre># Inside docs/_build/html directory.
+python -m SimpleHTTPServer
+</pre></div>
+</div>
+<p>Then open your browser to <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+<p>This should display a rendered HTML page that says <strong>Welcome to Crawler’s documentation!</strong> at the top.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code> is the main way you will build HTML documentation locally.
+It is simply a wrapper around a more complex call to Sphinx,
+which you can see as the first line of output.</p>
+</div>
+</div>
+<div class="section" id="custom-theme">
+<h3>Custom Theme<a class="headerlink" href="#custom-theme" title="Permalink to this headline">¶</a></h3>
+<p>You&#8217;ll notice your docs look a bit different than mine.
+You can change this by setting the <code class="docutils literal"><span class="pre">html_theme</span></code> setting in your <code class="docutils literal"><span class="pre">conf.py</span></code>.
+Go ahead and set it like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">html_theme</span> <span class="o">=</span> <span class="s">&#39;sphinx_rtd_theme&#39;</span>
+</pre></div>
+</div>
+<p>If you rebuild your documentation,
+you will see the new theme:</p>
+<div class="highlight-python"><div class="highlight"><pre>make html
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Didn&#8217;t see your new theme?
+That&#8217;s because Sphinx is smart,
+and only rebuilds pages that have changed.
+It might have thought none of your pages changed,
+so it didn&#8217;t rebuild anything.
+Fix this by running a <code class="docutils literal"><span class="pre">make</span> <span class="pre">clean</span> <span class="pre">html</span></code>,
+which will force a full rebuild.</p>
+</div>
+</div>
+</div>
+<div class="section" id="extra-credit">
+<h2>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this headline">¶</a></h2>
+<p>Have some extra time left?
+Check out these other cool things you can do with Sphinx.</p>
+<div class="section" id="understanding-conf-py">
+<h3>Understanding <code class="docutils literal"><span class="pre">conf.py</span></code><a class="headerlink" href="#understanding-conf-py" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx is quite configurable,
+which can be a bit overwhelming.
+However,
+the <code class="docutils literal"><span class="pre">conf.py</span></code> file is quite well docuemnted.
+You can read through it and get some ideas about what all it can do.</p>
+<p>A few of the more useful settings are:</p>
+<ul class="simple">
+<li>project</li>
+<li>html_theme</li>
+<li>extensions</li>
+<li>exclude_patterns</li>
+</ul>
+<p>This is all well documented in the Sphinx <a class="reference external" href="http://sphinx-doc.org/config.html#build-config" title="(in Sphinx v1.3.1+)"><span>The build configuration file</span></a> doc.</p>
+</div>
+<div class="section" id="moving-on">
+<h3>Moving on<a class="headerlink" href="#moving-on" title="Permalink to this headline">¶</a></h3>
+<p>Now it is time to move on to <a class="reference internal" href="step-1.html"><em>Step 1: Getting started with RST</em></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="step-1.html" class="btn btn-neutral float-right" title="Step 1: Getting started with RST" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Sphinx Tutorial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Eric Holscher.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,485 @@
+
+
+
+          
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Step 3: Keeping Documentation Up to Date &mdash; Sphinx Tutorial 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Sphinx Tutorial 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Finishing Up: Additional Extensions &amp; Individual Exploration" href="finish.html"/>
+        <link rel="prev" title="Step 2: Building References &amp; API docs" href="step-2.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Sphinx Tutorial
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              1.0
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+
+          
+          
+
+
+          
+
+          
+          
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="start.html">Getting Started: Overview &amp; Introduction to Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step-1.html">Step 1: Getting started with RST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step-2.html">Step 2: Building References &amp; API docs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Step 3: Keeping Documentation Up to Date</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#testing-your-code">Testing your code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-doctests-to-our-utils">Add doctests to our utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#caveats">Caveats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-your-docs">Test your docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-the-docs">Read the Docs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#read-the-docs-features">Read the Docs Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extra-credit">Extra Credit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#explore-doctests-more">Explore doctests more</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-crawler">Run the crawler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moving-on">Moving on</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="finish.html">Finishing Up: Additional Extensions &amp; Individual Exploration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Supplemental Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful-links.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step1/index.html">Crawler Step 1 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step2/index.html">Crawler Step 2 Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step 3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="crawler/docs/step3/index.html">Crawler Step 3 Documentation</a></li>
+</ul>
+
+          
+
+          
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Sphinx Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Step 3: Keeping Documentation Up to Date</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="step-3-keeping-documentation-up-to-date">
+<h1>Step 3: Keeping Documentation Up to Date<a class="headerlink" href="#step-3-keeping-documentation-up-to-date" title="Permalink to this headline">¶</a></h1>
+<p>Now we have a wonderful set of documentation,
+so we want to make sure it stays up to date and correct.</p>
+<p>There are two factors here:</p>
+<ul class="simple">
+<li>The documentation is up to date with the code</li>
+<li>The user is seeing the latest version of the docs</li>
+</ul>
+<p>We will solve the first problem with Sphinx&#8217;s <a class="reference external" href="http://sphinx-doc.org/ext/doctest.html#module-sphinx.ext.doctest" title="(in Sphinx v1.3.1+)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> module.
+The second problem we will solve by deploying our docs to <a class="reference external" href="https://readthedocs.org">Read the Docs</a>.</p>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="testing-your-code">
+<h3>Testing your code<a class="headerlink" href="#testing-your-code" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx ships with a <code class="docutils literal"><span class="pre">doctest</span></code> module which is quite powerful.
+It allows you to run tests against your code inside your docs.
+This means that you can verify all of the code examples work,
+so that your docs are always up to date with your code!</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This only works for Python currently.</p>
+</div>
+<p>You can read the full Sphinx docs for <a class="reference external" href="http://sphinx-doc.org/ext/doctest.html#module-sphinx.ext.doctest" title="(in Sphinx v1.3.1+)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a>,
+but here is a basic example:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">doctest</span><span class="p">::</span>
+
+        &gt;&gt;&gt; sum(2, 2)
+        4
+</pre></div>
+</div>
+<p>When you run this example,
+Sphinx will validate the return is what is expected.</p>
+<p>If you need any other code to be run,
+but not output to the user,
+you can use <code class="docutils literal"><span class="pre">testsetup</span></code>:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">testsetup</span><span class="p">::</span>
+
+        import os
+
+        x = 4
+</pre></div>
+</div>
+<p>This will then be available in the examples that you actually show your user.</p>
+</div>
+</div>
+<div class="section" id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add-doctests-to-our-utils">
+<h3>Add doctests to our utils<a class="headerlink" href="#add-doctests-to-our-utils" title="Permalink to this headline">¶</a></h3>
+<p>The utils module is inside <code class="docutils literal"><span class="pre">crawler</span></code> is a good candidate for testing.
+It has small,
+self-contained pieces of logic that will work great as doctests.</p>
+<p>Open your <code class="docutils literal"><span class="pre">api.rst</span></code> module to your project that looks like:</p>
+<div class="highlight-rst"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="highlight"><pre>Crawler Python API
+
+Getting started with Crawler is easy.
+The main class you need to care about is crawler.main.Crawler
+
+crawler.main
+
+crawler.utils
+
+crawler.utils.should_ignore
+
+should_ignore([&#39;blog/$&#39;], &#39;http://ericholscher.com/blog/&#39;)
+True
+
+# This test should fail
+should_ignore([&#39;home&#39;], &#39;http://ericholscher.com/blog/&#39;)
+True
+
+crawler.utils.log
+
+log(&#39;http://ericholscher.com/blog/&#39;, 200)
+OK: 200 http://ericholscher.com/blog/ 
+
+log(&#39;http://ericholscher.com/blog/&#39;, 500)
+ERR: 500 http://ericholscher.com/blog/
+
+# This test should fail
+log(&#39;http://ericholscher.com/blog/&#39;, 500)
+OK: 500 http://ericholscher.com/blog/
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Live Preview: <a class="reference internal" href="crawler/docs/step3/api.html"><em>Crawler Python API</em></a></p>
+</div>
+<p>As you can see here,
+we are actually testing our logic.
+It also acts as documentation for your users,
+and is included in the output of your documentation.</p>
+<p>These doctests do double duty,
+acting as <strong>tests and documentation</strong>.</p>
+<div class="section" id="caveats">
+<h4>Caveats<a class="headerlink" href="#caveats" title="Permalink to this headline">¶</a></h4>
+<p>Note that we have to import our code in the <code class="docutils literal"><span class="pre">testsetup::</span></code> block.
+This is so that Sphinx can call the functions properly in our doctest blocks.
+This is hidden in the output of the docs though,
+so users won&#8217;t be confused.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can also put doctest blocks directly in your docstrings.
+They will need to include full import paths though,
+as Sphinx can&#8217;t guarentee the <code class="docutils literal"><span class="pre">testsetup::</span></code> directive will be called.</p>
+</div>
+</div>
+</div>
+<div class="section" id="test-your-docs">
+<h3>Test your docs<a class="headerlink" href="#test-your-docs" title="Permalink to this headline">¶</a></h3>
+<p>You can now go ahead and test your docs:</p>
+<div class="highlight-python"><div class="highlight"><pre>make doctest
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need to make sure to add the <code class="docutils literal"><span class="pre">sphinx.ext.doctest</span></code> to your <code class="docutils literal"><span class="pre">extensions</span></code>.
+Open up your <code class="docutils literal"><span class="pre">conf.py</span></code> file and make sure that you have it there.</p>
+</div>
+<p>It should provide output that looks similar to this:</p>
+<div class="highlight-python"><div class="highlight"><pre>Doctest summary
+===============
+    5 tests
+    2 failures in tests
+    0 failures in setup code
+    0 failures in cleanup code
+build finished with problems.
+</pre></div>
+</div>
+<p>As you can see,
+some of the tests are broken!
+You should go ahead and fix the tests :)</p>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>In order for Read the Docs to build your code,
+it needs to be able to import it.
+This means it needs all of the required Python modules you import in the code.</p>
+<p>You can add a <code class="docutils literal"><span class="pre">requirements.txt</span></code> to the top-level of your project:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">beautifulsoup4</span>
+<span class="n">requests</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="read-the-docs">
+<h3>Read the Docs<a class="headerlink" href="#read-the-docs" title="Permalink to this headline">¶</a></h3>
+<p>Last but not least,
+once you&#8217;ve written your documentation you have to put it somewhere for the world to see!
+Read the Docs makes this quite simple,
+and is free for all open source projects.</p>
+<ul class="simple">
+<li>Register for an account at <a class="reference external" href="http://readthedocs.org">http://readthedocs.org</a></li>
+<li>Click the <em>Import Project</em> button</li>
+<li>Add the URL for a specific repository you want to build docs for</li>
+<li>Sit back and have a drink while Read the Docs does the rest.</li>
+</ul>
+<p>It will:</p>
+<ul class="simple">
+<li>Pull down your code</li>
+<li>Install your <code class="docutils literal"><span class="pre">requirements.txt</span></code></li>
+<li>Build HTML, PDF, and ePub of your docs</li>
+<li>Serve it up online at <code class="docutils literal"><span class="pre">http://&lt;projectname&gt;.readthedocs.org</span></code></li>
+</ul>
+<div class="section" id="read-the-docs-features">
+<h4>Read the Docs Features<a class="headerlink" href="#read-the-docs-features" title="Permalink to this headline">¶</a></h4>
+<p>Read the Docs gives you a number of additional features.</p>
+<ul class="simple">
+<li>You can add Versions to your project for each tag &amp; branch.</li>
+<li>You can alerts for when your doc build fails</li>
+<li>You can search across the full set of docs</li>
+</ul>
+<p>Let&#8217;s see what that looks like in practice.</p>
+</div>
+</div>
+</div>
+<div class="section" id="extra-credit">
+<h2>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this headline">¶</a></h2>
+<p>Have some extra time left?
+Let&#8217;s run the code and see if it actually works!</p>
+<div class="section" id="explore-doctests-more">
+<h3>Explore doctests more<a class="headerlink" href="#explore-doctests-more" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx&#8217;s <a class="reference external" href="http://sphinx-doc.org/ext/doctest.html#module-sphinx.ext.doctest" title="(in Sphinx v1.3.1+)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> module has more interesting options.
+You can do things that look more like normal unit tests,
+as well as specific &#8220;doctest-style&#8221; testing.
+Go in and re-write one of the existing tests to use the <code class="docutils literal"><span class="pre">testcode</span></code> directive instead of the <code class="docutils literal"><span class="pre">doctest</span></code> directive.</p>
+</div>
+<div class="section" id="run-the-crawler">
+<h3>Run the crawler<a class="headerlink" href="#run-the-crawler" title="Permalink to this headline">¶</a></h3>
+<p>Go ahead and run the crawler against the Read the Docs documentation:</p>
+<div class="highlight-python"><div class="highlight"><pre># in crawler/src/crawler
+python main.py -u https://docs.readthedocs.org/en/latest/
+</pre></div>
+</div>
+<p>You should see your terminal start printing output,
+if your internet if working.</p>
+<p>Can you add another command line option,
+and document it?</p>
+</div>
+<div class="section" id="moving-on">
+<h3>Moving on<a class="headerlink" href="#moving-on" title="Permalink to this headline">¶</a></h3>
+<p>Now we are at the last part of our Tutorial.
+Let&#8217;s head on over to <a class="reference internal" href="finish.html"><em>Finishing Up: Additional Extensions &amp; Individual Exploration</em></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="finish.html" class="btn btn-neutral float-right" title="Finishing Up: Additional Extensions &amp; Individual Exploration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="step-2.html" class="btn btn-neutral" title="Step 2: Building References &amp; API docs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Eric Holscher.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
